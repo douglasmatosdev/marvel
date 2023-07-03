@@ -3,7 +3,7 @@ import React, { FC, Fragment, useState, useEffect, useCallback, useRef } from 'r
 import { DashboardContainer } from './styled';
 
 import ApiServices from '../../Services/api'
-import { verifyApiKey } from '../../Utils/secure'
+import { verifyApiKey } from '../../utils/secure'
 import HeroCard from '../HeroCard';
 
 import SeachHeroContainer from '../Search'

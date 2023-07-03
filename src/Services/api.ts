@@ -1,7 +1,7 @@
 import axios from 'axios'
 import md5 from 'md5'
-import { marvelCredenditals } from '../Utils/secure'
-import { MARVEL_URL } from '../Utils'
+import { marvelCredenditals } from '../utils/secure'
+import { MARVEL_URL } from '../utils'
 
 const api = axios.create({
     baseURL: MARVEL_URL
