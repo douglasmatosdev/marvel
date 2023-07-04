@@ -2,11 +2,11 @@
 import React, { FC, Fragment, useState, useEffect, useCallback, useRef } from 'react'
 import { DashboardContainer } from './styled';
 
-import ApiServices from '../../Services/api'
-import { verifyApiKey } from '../../utils/secure'
-import HeroCard from '../HeroCard';
+import ApiServices from '@/services/api'
+import { verifyApiKey } from '@/services/secure'
+import HeroCard from '@/Components/HeroCard';
 
-import SeachHeroContainer from '../Search'
+import SeachHeroContainer from '@/Components/Search'
 
 const Dashboard: FC = () => {
     const limit = 10

@@ -2,7 +2,7 @@
 import React, { FC, useState, ChangeEvent, useCallback, useEffect } from 'react'
 import { SearchHeroContainer } from './styled'
 import { RiSearch2Line } from 'react-icons/ri'
-import ApiServices from '../../Services/api'
+import ApiServices from '../../services/api'
 
 interface SearchHeroProps {
     handleFilterHeros: (suggestions: Record<string, any>[]) => void
