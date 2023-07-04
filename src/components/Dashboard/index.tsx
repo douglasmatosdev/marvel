@@ -4,9 +4,9 @@ import { DashboardContainer } from './styled';
 
 import ApiServices from '@/services/api'
 import { verifyApiKey } from '@/services/secure'
-import HeroCard from '@/Components/HeroCard';
+import HeroCard from '@/components/HeroCard';
 
-import SeachHeroContainer from '@/Components/Search'
+import SeachHeroContainer from '@/components/Search'
 
 const Dashboard: FC = () => {
     const limit = 10

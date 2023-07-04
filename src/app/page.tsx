@@ -1,6 +1,6 @@
 'use client'
-import Dashboard from '@/Components/Dashboard'
-import { Logo } from '@/Components/Logo'
+import Dashboard from '@/components/Dashboard'
+import { Logo } from '@/components/Logo'
 import styled from 'styled-components'
 
 export default function Home() {
@@ -17,5 +17,4 @@ export const HomeContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 2rem;
-
 `
