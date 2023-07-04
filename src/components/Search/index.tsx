@@ -1,5 +1,5 @@
 'use client'
-import React, { FC, useState, ChangeEvent, useCallback } from 'react'
+import React, { useState, ChangeEvent, useCallback } from 'react'
 import { SearchHeroContainer } from './styled'
 import { RiSearch2Line } from 'react-icons/ri'
 import ApiServices from '@/services/api'
