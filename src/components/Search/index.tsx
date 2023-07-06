@@ -25,6 +25,7 @@ const SearchHero = ({ handleFilterHeros }: SearchHeroProps) => {
                 handleFilterHeros(results)
                 setSuggestions(results)
             })
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     const handle = useCallback((name: string) => {
@@ -34,6 +35,7 @@ const SearchHero = ({ handleFilterHeros }: SearchHeroProps) => {
         } else {
             getSuggestions(name)
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [inputValue])
 
     const handleOnClick = (suggestion: Record<string, any>) => {

@@ -33,7 +33,10 @@ const Dashboard: FC = () => {
         }
     }, [heros])
 
-    useEffect(() => { setPagination(0) }, [])
+    useEffect(() => {
+        setPagination(0)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
 
     useEffect(() => {
         if (maxIndex === heros?.length) {
