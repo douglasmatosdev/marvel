@@ -11,8 +11,11 @@ const HeroCard: FC<HeroCardProps> = ({ url, name }) => {
     return (
         <HeroCardContainer>
             <Image
+                loader={() => url}
                 src={url}
                 alt={name}
+                width={100}
+                height={100}
             />
             <div className="hero-name">
                 {name}
