@@ -10,8 +10,7 @@ interface HeroCardProps {
 const HeroCard: FC<HeroCardProps> = ({ url, name }) => {
     return (
         <HeroCardContainer>
-            <Image
-                loader={() => url}
+            <img
                 src={url}
                 alt={name}
                 width={100}
