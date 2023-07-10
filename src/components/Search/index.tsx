@@ -11,6 +11,7 @@ interface SearchHeroProps {
 const SearchHero = ({ handleFilterHeros }: SearchHeroProps) => {
     const [inputValue, setInputValue] = useState({ hero: '' })
     const [suggestions, setSuggestions] = useState<Record<string, any>[]>([])
+    const [focus, setFocus] = React.useState(false)
 
     const hanleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
         const name = event?.target?.value
@@ -46,18 +47,40 @@ const SearchHero = ({ handleFilterHeros }: SearchHeroProps) => {
         })
     }
 
+    // detect outside click
+    React.useEffect(() => {
+        if (focus) {
+            window.addEventListener('click', (event: MouseEvent) => {
+                //@ts-ignore
+                if (event?.target?.name !== 'hero_input_search') {
+                    setSuggestions([])
+                    setFocus(false)
+                }
+            })
+        }
+
+        return () => {
+            window.removeEventListener('click', () => {
+                setFocus(false)
+            })
+        }
+    }, [focus])
+
     return (
         <SearchHeroContainer>
             <div className="input-name">
                 <div className="icon-search">
                     <RiSearch2Line />
                 </div>
-                <label htmlFor="hero">
+                <label htmlFor="hero_input_search">
                     <input
                         type="text"
-                        name="hero"
+                        name="hero_input_search"
                         value={inputValue.hero}
                         onChange={event => hanleInputChange(event)}
+                        onFocus={() => {
+                            setFocus(true)
+                        }}
                     />
                 </label>
             </div>
