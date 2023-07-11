@@ -6,6 +6,7 @@ export const DashboardContainer = styled.div`
     padding: 20px;
     flex: 1;
     width: 100%;
+    text-align: center;
     .heros-container {
 
         background-color: #fff;

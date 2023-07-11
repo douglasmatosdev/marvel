@@ -11,7 +11,7 @@ import SeachHeroContainer from '@/components/Search'
 const Dashboard: FC = () => {
     const limit = 10
     const [lastIndex, setLastIndex] = useState(4)
-    const [heros, setHeros]: any[] = useState([])
+    const [heros, setHeros] = useState<Record<string, any>[]>([])
     const [maxIndex, setMaxIndex] = useState(limit)
     const [minIndex, setMinIndex] = useState(0)
     const [pageCount, setPageCount] = useState(0)
@@ -55,7 +55,7 @@ const Dashboard: FC = () => {
 
     return (
         <DashboardContainer>
-            {!loading ? (
+            {!loading && heros.length ? (
                 <Fragment>
                     <SeachHeroContainer
                         handleFilterHeros={handleFilterHeros}
